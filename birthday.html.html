@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Aniversário!</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        color: #333;
+    }
+    #container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .balloon {
+        display: inline-block;
+        font-size: 14px;
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: #f08080;
+        color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <h1>🎈 Feliz Aniversário Anjinhoo, aproveite seu dia! 🎈</h1>
+    <button id="button" onclick="showBalloons()">Clique aqui para ver os balões!</button>
+    <div id="balloons"></div>
+</div>
+<script>
+    function showBalloons() {
+        const languages = [
+           { name: "Português", message: "Feliz aniversário, Sara!" },
+            { name: "Inglês", message: "Happy birthday, Sara!" },
+            { name: "Espanhol", message: "¡Feliz cumpleaños, Sara!" },
+            { name: "Francês", message: "Joyeux anniversaire, Sara!" },
+            { name: "Alemão", message: "Alles Gute zum Geburtstag, Sara!" },
+            { name: "Italiano", message: "Buon compleanno, Sara!" },
+            { name: "Russo", message: "С днём рождения, Сара!" },
+            { name: "Chinês", message: "生日快乐，莎拉！" },
+            { name: "Japonês", message: "誕生日おめでとう、サラさん！" },
+            { name: "Coreano", message: "생일 축하해요, 사라씨!" },
+            { name: "Árabe", message: "عيد ميلاد سعيد، سارة!" },
+            { name: "Hebraico", message: "יום הולדת שמח, שרה!" },
+            { name: "Hindi", message: "जन्मदिन की शुभकामनाएं, सारा!" },
+            { name: "Turco", message: "Doğum günün kutlu olsun, Sara!" },
+            { name: "Polonês", message: "Sto lat, Sara!" },
+            { name: "Holandês", message: "Gefeliciteerd met je verjaardag, Sara!" },
+            { name: "Sueco", message: "Grattis på födelsedagen, Sara!" },
+            { name: "Dinamarquês", message: "Tillykke med fødselsdagen, Sara!" },
+            { name: "Norueguês", message: "Gratulerer med bursdagen, Sara!" },
+            { name: "Finlandês", message: "Hyvää syntymäpäivää, Sara!" },
+            { name: "Checo", message: "Všechno nejlepší k narozeninám, Sara!" },
+            { name: "Eslovaco", message: "Všetko najlepšie k narodeninám, Sara!" },
+            { name: "Húngaro", message: "Boldog születésnapot, Sara!" },
+            { name: "Romeno", message: "La mulți ani, Sara!" },
+            { name: "Búlgaro", message: "Честит рожден ден, Сара!" },
+            { name: "Sérvio", message: "Срећан рођендан, Сара!" },
+            { name: "Croata", message: "Sretan rođendan, Sara!" },
+            { name: "Esloveno", message: "Vse najboljše za rojstni dan, Sara!" },
+            { name: "Ucraniano", message: "З днем народження, Сара!" },
+            { name: "Bielorrusso", message: "З днём нараджэння, Сара!" },
+            { name: "Lituano", message: "Su gimtadieniu, Sara!" },
+            { name: "Letão", message: "Daudz laimes dzimšanas dienā, Sara!" },
+            { name: "Estoniano", message: "Palju õnne sünnipäevaks, Sara!" },
+            { name: "Lituano", message: "Laimingos gimtadienio, Sara!" },
+            { name: "Cazaque", message: "Туған күніңмен құттықтаймыз, Сара!" },
+            { name: "Georgiano", message: "რეუშობის დღე გიმითხარო, სა!" },
+            { name: "Armênio", message: "Ծննդդ շնորհավոր, Սարա!" },
+            { name: "Azeri", message: "Ad günün mübarək olsun, Sara!" },
+            { name: "Turcomeno", message: "Dogum günün kutlu olsun, Sara!" },
+            { name: "Usbeque", message: "Tug'il kuningiz bilan tabriklaymiz, Sara!" }
+        ];
+
+        const container = document.getElementById("balloons");
+        container.innerHTML = "";
+        
+        languages.forEach(language => {
+            const balloon = document.createElement("div");
+            balloon.classList.add("balloon");
+            balloon.textContent = `${language.message} (${language.name})`;
+            container.appendChild(balloon);
+        });
+    }
+</script>
+</body>
+</html>
